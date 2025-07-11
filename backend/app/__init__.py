@@ -17,5 +17,7 @@ def create_app():
 
     from .auth.routes import auth_bp
     app.register_blueprint(auth_bp, url_prefix='/api/auth')
-
+    from .resume.routes import resume_bp
+    app.register_blueprint(resume_bp, url_prefix='/api/resume')
+    
     return app
